@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="bootstrap.css" rel="stylesheet">
+        <link href="bootstrap-responsive.css" rel="stylesheet">
+        <title>Pick My Professor HomePage</title>
+        <script src="main.js"></script>       
+    </head>
+    <body>
+    <div class="container">
+        <div class="row">
+        <div class= "span5 centered">
+            <img src="WhitewaterLogo.gif" alt="Whitewater Logo">
+        </div>
+        </br>    
+        <div class="span4 centered">    
+        <select class="span4" id="subjects" onmousedown="writeSubjects()"> 
+                <option>Select Course</option>                             
+       </select>
+       </br>       
+       <select class="span4" id="courses" onmousedown="writeCourses()" onmouseup="writeTeachers()" style="visibility:hidden">
+                <option>Select Catalog Number</option>                           
+       </select>
+       </div>
+       <div class= "span5 centered">
+            <table class="table table-bordered" id="teachers">
+            </table>
+       </div>
+        <div id="reviewsIframe" class= "span11 centered" style="height:40%">
+            <iframe id="reviews" src="" style="width:100%;height:750px; border:2px solid;border-radius:25px; visibility:hidden;" scrolling="yes" onload="resizeIframe(this)">s</iframe>
+        </div>             
+        </div>
+    </div>    
+    </body>
+</html>
