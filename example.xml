@@ -1,0 +1,14 @@
+<subject>
+	<code>MCS</code>
+	<class>
+		<number>220</number>
+		<teacher>
+			<firstName>John</firstName>
+			<lastName>Smith</lastName>
+		</teacher>
+		<teacher>
+			<firstName>Jane</firstName>
+			<lastName>Doe</lastName>
+		</teacher>
+	<class>
+</subject>
