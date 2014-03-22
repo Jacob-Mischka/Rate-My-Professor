@@ -1,8 +1,14 @@
 xmlhttp=new XMLHttpRequest();
-xmlhttp.open("GET","test.xml",false);
+xmlhttp.open("GET","fall2014.xml",false);
 xmlhttp.send();
 xmlDoc=xmlhttp.responseXML; 
 subject=xmlDoc.getElementsByTagName("subject");
+var code;
+var course;
+var number;
+var teacher;
+var firstName;
+var lastName;
 
 function getSubject(i){
 	code=(subject[i].getElementsByTagName("code")[0].childNodes[0].nodeValue);

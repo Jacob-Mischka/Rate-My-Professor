@@ -6,6 +6,16 @@
         <link href="bootstrap-responsive.css" rel="stylesheet">
         <title>Pick My Professor HomePage</title>
         <script src="main.js"></script>       
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-46043411-1', 'mischka.info');
+	  ga('send', 'pageview');
+
+	</script>
     </head>
     <body>
     <div class="container">
@@ -15,11 +25,11 @@
         </div>
         </br>    
         <div class="span4 centered">    
-        <select class="span4" id="subjects" onmousedown="writeSubjects()"> 
-                <option>Select Course</option>                             
+        <select class="span4" id="subjects" onmousedown="writeSubjects(); document.getElementById('teachers').style.visibility='hidden';"> 
+                <option>Select Subject</option>                             
        </select>
        </br>       
-       <select class="span4" id="courses" onmousedown="writeCourses()" onmouseup="writeTeachers()" style="visibility:hidden">
+       <select class="span4" id="courses" onmousedown="writeCourses();" onmouseup="writeTeachers(); document.getElementById('teachers').style.visibility='visible';" onchange="writeTeachers(); document.getElementById('teachers').style.visibility='visible';" style="visibility:hidden">
                 <option>Select Catalog Number</option>                           
        </select>
        </div>
@@ -28,7 +38,7 @@
             </table>
        </div>
         <div id="reviewsIframe" class= "span11 centered" style="height:40%">
-            <iframe id="reviews" src="" style="width:100%;height:750px; border:2px solid;border-radius:25px; visibility:hidden;" scrolling="yes" onload="resizeIframe(this)">s</iframe>
+            <iframe id="reviews" src="" style="width:100%;height:750px; border:2px solid;border-radius:25px; visibility:hidden;" scrolling="yes"></iframe>
         </div>             
         </div>
     </div>    
